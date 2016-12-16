@@ -1,0 +1,30 @@
+
+
+
+//var start = new Date("2016-12-16 00:00:00")
+
+//var end = new Date("2016-12-16 23:59:59")
+
+//db.topics.find({"createTime":{"$gte":start,"$lt":end}}).count();
+//db.topics.find({"createTime":{"$gte":ISODate("2016-12-08T00:00:00Z"),"$lt":ISODate("2016-12-08T23:59:59Z")}}).count();
+
+
+//db.topics.find({"createTime":{"$gte":ISODate("2016-12-08T00:00:00Z"),"$lt":ISODate("2016-12-08T23:59:59Z")}}).count();
+//db.topics.find({"createTime":{"$gte":ISODate("2016-12-09T00:00:00Z"),"$lt":ISODate("2016-12-09T23:59:59Z")}}).count();
+//db.topics.find({"createTime":{"$gte":ISODate("2016-12-10T00:00:00Z"),"$lt":ISODate("2016-12-10T23:59:59Z")}}).count();
+//db.topics.find({"createTime":{"$gte":ISODate("2016-12-11T00:00:00Z"),"$lt":ISODate("2016-12-11T23:59:59Z")}}).count();
+//db.topics.find({"createTime":{"$gte":ISODate("2016-12-12T00:00:00Z"),"$lt":ISODate("2016-12-12T23:59:59Z")}}).count();
+//db.topics.find({"createTime":{"$gte":ISODate("2016-12-13T00:00:00Z"),"$lt":ISODate("2016-12-13T23:59:59Z")}}).count();
+//db.topics.find({"createTime":{"$gte":ISODate("2016-12-14T00:00:00Z"),"$lt":ISODate("2016-12-14T23:59:59Z")}}).count();
+//db.topics.find({"createTime":{"$gte":ISODate("2016-12-15T00:00:00Z"),"$lt":ISODate("2016-12-15T23:59:59Z")}}).count();
+//db.topics.find({"createTime":{"$gte":ISODate("2016-12-16T00:00:00Z"),"$lt":ISODate("2016-12-16T23:59:59Z")}}).count();
+
+
+var arr = ["2016-12-08T00:00:00Z","2016-12-09T00:00:00Z","2016-12-10T00:00:00Z"]
+var arr2 = ["2016-12-08T23:59:59Z","2016-12-09T23:59:59Z","2016-12-10T23:59:59Z"]
+
+for (var i = 0; i <= 2; i++) {
+  var count=db.topics.find({"createTime":{"$gte":ISODate(arr[i]),"$lt":ISODate(arr2[i])}}).count();
+  print(count);
+}
+
